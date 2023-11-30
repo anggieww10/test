@@ -1,27 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'dashboard_icon.dart';
 
-class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xFFF7F7F7),
-      ),
-      home: Scaffold(
-        body: ListView(children: [
-          Dashboard(),
-          //const Vector(),
-        ]),
-      ),
-    );
-  }
-}
-
-// ignore: use_key_in_widget_constructors
-class Dashboard extends StatelessWidget {
+// ignore: use_key_in_widget_constructors, camel_case_types
+class dashboard_widgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,7 +14,7 @@ class Dashboard extends StatelessWidget {
             children: [
               const Positioned(
                 left: 29,
-                top: 30,
+                top: 67,
                 child: Text(
                   'Dashboard',
                   textAlign: TextAlign.center,
@@ -49,10 +29,10 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 25,
-                top: 65,
+                top: 106,
                 child: Container(
                   width: 165,
-                  height: 240,
+                  height: 255,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -65,29 +45,27 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 200,
-                top: 65,
+                top: 106,
                 child: Container(
                   width: 165,
-                  height: 110,
-                  decoration: ShapeDecoration(
+                  height: 120,
+                  decoration: BoxDecoration(
                     color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      side:
-                          const BorderSide(width: 1, color: Color(0xFFEBEBEB)),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                    border:
+                        Border.all(width: 1, color: const Color(0xFFEBEBEB)),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
               const Positioned(
                 left: 34,
-                top: 80,
+                top: 115,
                 child: Text(
                   'Air Temperature',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 12,
+                    fontSize: 14,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                     height: 0,
@@ -96,13 +74,13 @@ class Dashboard extends StatelessWidget {
               ),
               const Positioned(
                 left: 211,
-                top: 80,
+                top: 115,
                 child: Text(
                   'Moisture',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 12,
+                    fontSize: 14,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                     height: 0,
@@ -111,13 +89,13 @@ class Dashboard extends StatelessWidget {
               ),
               const Positioned(
                 left: 34,
-                top: 98,
+                top: 132,
                 child: Text(
                   'Normal temperature as usual',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xFF575757),
-                    fontSize: 7,
+                    fontSize: 8,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
                     height: 0,
@@ -126,13 +104,13 @@ class Dashboard extends StatelessWidget {
               ),
               const Positioned(
                 left: 211,
-                top: 98,
+                top: 132,
                 child: Text(
                   'Normal temperature as usual',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xFF575757),
-                    fontSize: 7,
+                    fontSize: 8,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
                     height: 0,
@@ -141,43 +119,28 @@ class Dashboard extends StatelessWidget {
               ),
               const Positioned(
                 left: 34,
-                top: 195,
+                top: 234,
                 child: Text(
                   '26°C',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xFF171717),
-                    fontSize: 25,
+                    fontSize: 36,
                     fontFamily: 'Pragati Narrow',
                     fontWeight: FontWeight.w400,
                     height: 0,
                   ),
                 ),
               ),
-              Positioned(
-                left: 122,
-                top: 360,
-                child: Container(
-                  width: 60,
-                  height: 60,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                          "assets/images/icon_thermometer.png"), // Sesuaikan dengan path atau nama file gambar Anda
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
-              ),
               const Positioned(
                 left: 211,
-                top: 120,
+                top: 152,
                 child: Text(
                   '50%',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xFF171717),
-                    fontSize: 25,
+                    fontSize: 36,
                     fontFamily: 'Pragati Narrow',
                     fontWeight: FontWeight.w400,
                     height: 0,
@@ -186,10 +149,10 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 200,
-                top: 195,
+                top: 241,
                 child: Container(
                   width: 165,
-                  height: 110,
+                  height: 120,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -202,13 +165,13 @@ class Dashboard extends StatelessWidget {
               ),
               const Positioned(
                 left: 210,
-                top: 205,
+                top: 250,
                 child: Text(
                   'Ammonia Levels',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 12,
+                    fontSize: 14,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                     height: 0,
@@ -217,7 +180,7 @@ class Dashboard extends StatelessWidget {
               ),
               const Positioned(
                 left: 211,
-                top: 225,
+                top: 271,
                 child: Text(
                   'Normal temperature as usual',
                   textAlign: TextAlign.center,
@@ -232,13 +195,13 @@ class Dashboard extends StatelessWidget {
               ),
               const Positioned(
                 left: 209,
-                top: 250,
+                top: 291,
                 child: Text(
                   'LIGHT',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xFF171717),
-                    fontSize: 25,
+                    fontSize: 32,
                     fontFamily: 'Pragati Narrow',
                     fontWeight: FontWeight.w400,
                     height: 0,
@@ -247,10 +210,10 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 199,
-                top: 320,
+                top: 376,
                 child: Container(
                   width: 165,
-                  height: 110,
+                  height: 120,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -263,7 +226,7 @@ class Dashboard extends StatelessWidget {
               ),
               const Positioned(
                 left: 207,
-                top: 330,
+                top: 385,
                 child: Text(
                   'Water Dispenser \nCondition',
                   style: TextStyle(
@@ -275,12 +238,13 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
               ),
+
               Positioned(
                 left: 25,
-                top: 320,
+                top: 376,
                 child: Container(
                   width: 165,
-                  height: 110,
+                  height: 120,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -291,9 +255,10 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
               ),
+
               const Positioned(
                 left: 34,
-                top: 330,
+                top: 385,
                 child: Text(
                   'Feed Dispenser \nCondition',
                   style: TextStyle(
@@ -307,13 +272,13 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 122,
-                top: 360,
+                top: 430,
                 child: Container(
                   width: 60,
                   height: 60,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/60x60"),
+                      image: AssetImage('assets/images/food.png'),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -321,8 +286,9 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 34,
-                top: 380,
-                child: SizedBox(
+                top: 441,
+                // ignore: sized_box_for_whitespace
+                child: Container(
                   width: 62.40,
                   height: 33,
                   child: Stack(
@@ -365,7 +331,7 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 207,
-                top: 380,
+                top: 441,
                 child: SizedBox(
                   width: 62.40,
                   height: 33,
@@ -409,7 +375,7 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 25,
-                top: 440,
+                top: 505,
                 child: SizedBox(
                   width: 339,
                   height: 192,
@@ -420,7 +386,7 @@ class Dashboard extends StatelessWidget {
                         top: 0,
                         child: Container(
                           width: 339,
-                          height: 185,
+                          height: 192,
                           decoration: ShapeDecoration(
                             color: Colors.white,
                             shape: RoundedRectangleBorder(
@@ -447,7 +413,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       const Positioned(
                         left: 21,
-                        top: 150,
+                        top: 152,
                         child: Text(
                           '0',
                           style: TextStyle(
@@ -461,7 +427,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       const Positioned(
                         left: 18,
-                        top: 125,
+                        top: 127,
                         child: Text(
                           '25',
                           style: TextStyle(
@@ -475,7 +441,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       const Positioned(
                         left: 18,
-                        top: 99,
+                        top: 102,
                         child: Text(
                           '50',
                           style: TextStyle(
@@ -489,7 +455,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       const Positioned(
                         left: 18,
-                        top: 74,
+                        top: 77,
                         child: Text(
                           '75',
                           style: TextStyle(
@@ -503,7 +469,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       const Positioned(
                         left: 16,
-                        top: 50,
+                        top: 52,
                         child: Text(
                           '100',
                           style: TextStyle(
@@ -517,7 +483,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 40,
-                        top: 55,
+                        top: 60,
                         child: Container(
                           width: 275,
                           decoration: const ShapeDecoration(
@@ -533,7 +499,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 40,
-                        top: 80,
+                        top: 85,
                         child: Container(
                           width: 275,
                           decoration: const ShapeDecoration(
@@ -549,7 +515,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 40,
-                        top: 105,
+                        top: 110,
                         child: Container(
                           width: 275,
                           decoration: const ShapeDecoration(
@@ -565,7 +531,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 40,
-                        top: 130,
+                        top: 135,
                         child: Container(
                           width: 275,
                           decoration: const ShapeDecoration(
@@ -581,7 +547,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 40,
-                        top: 155,
+                        top: 160,
                         child: Container(
                           width: 275,
                           decoration: const ShapeDecoration(
@@ -597,7 +563,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       const Positioned(
                         left: 270,
-                        top: 12,
+                        top: 14,
                         child: Text(
                           'Last 7 days',
                           textAlign: TextAlign.center,
@@ -687,7 +653,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 65,
-                        top: 128,
+                        top: 132,
                         child: Container(
                           width: 5,
                           height: 5,
@@ -699,7 +665,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 121,
-                        top: 69,
+                        top: 67,
                         child: Container(
                           width: 5,
                           height: 5,
@@ -711,7 +677,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 174,
-                        top: 59,
+                        top: 57,
                         child: Container(
                           width: 5,
                           height: 5,
@@ -723,7 +689,7 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 233,
-                        top: 102,
+                        top: 101,
                         child: Container(
                           width: 5,
                           height: 5,
@@ -734,8 +700,8 @@ class Dashboard extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 287,
-                        top: 92,
+                        left: 289,
+                        top: 91,
                         child: Container(
                           width: 5,
                           height: 5,
@@ -747,13 +713,13 @@ class Dashboard extends StatelessWidget {
                       ),
                       Positioned(
                         left: 68,
-                        top: 130,
+                        top: 135,
                         child: Transform(
                           transform: Matrix4.identity()
                             ..translate(0.0, 0.0)
-                            ..rotateZ(-0.82),
+                            ..rotateZ(-0.86),
                           child: Container(
-                            width: 80.80,
+                            width: 85.80,
                             decoration: const ShapeDecoration(
                               shape: RoundedRectangleBorder(
                                 side: BorderSide(
@@ -835,10 +801,10 @@ class Dashboard extends StatelessWidget {
               ),
               Positioned(
                 left: 0,
-                top: 675,
+                top: 734,
                 child: SizedBox(
                   width: 390,
-                  height: 80,
+                  height: 180,
                   child: Stack(
                     children: [
                       Positioned(
@@ -846,7 +812,7 @@ class Dashboard extends StatelessWidget {
                         top: 0,
                         child: Container(
                           width: 390,
-                          height: 80,
+                          height: 120,
                           decoration: const BoxDecoration(color: Colors.white),
                         ),
                       ),
@@ -941,6 +907,7 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
               ),
+              // tambahkan widget Positioned lainnya di sini
             ],
           ),
         ),
